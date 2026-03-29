@@ -4,7 +4,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ### Screenshot
 
-![](/preview.jpg)
+![App Screenshot](https://tsiupaknazar.github.io/tip-calculator/preview.jpg)
 
 ### Links
 

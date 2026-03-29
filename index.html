@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="stylesheet" href="/src/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+  <main class="calculator" aria-label="Splitter tip calculator">
+    <header class="calculator__header">
+      <h1 class="calculator__logo">
+        <img
+          class="calculator__logo-image"
+          src="/logo.svg"
+          alt="Splitter"
+          width="87"
+          height="54"
+        />
+      </h1>
+    </header>
+    <section class="calculator__card" aria-label="Tip calculator">
+      <form class="calculator__form" action="#" method="post">
+        <section class="calculator__controls" aria-label="Calculator inputs">
+          <div class="calculator__field">
+            <label class="calculator__label" for="bill">Bill</label>
+            
+            <div class="calculator__input-wrapper">
+              <img
+                class="calculator__input-icon"
+                src="/icon-dollar.svg"
+                alt=""
+                aria-hidden="true"
+                width="10"
+                height="16"
+              />
+
+              <input
+                class="calculator__input"
+                type="number"
+                id="bill"
+                min="0"
+                step="0.01"
+                inputmode="decimal"
+                placeholder="0"
+              />
+            </div>
+          </div>
+
+          <fieldset class="calculator__field calculator__field--tip">
+            <legend class="calculator__legend">Select Tip %</legend>
+
+            <div class="calculator__tip-options">
+              <button class="calculator__tip-button" type="button" data-tip="5" aria-pressed="false">5%</button>
+              <button class="calculator__tip-button" type="button" data-tip="10" aria-pressed="false">10%</button>
+              <button class="calculator__tip-button" type="button" data-tip="15" aria-pressed="false">15%</button>
+              <button class="calculator__tip-button" type="button" data-tip="25" aria-pressed="false">25%</button>
+              <button class="calculator__tip-button" type="button" data-tip="50" aria-pressed="false">50%</button>
+              
+              <input
+                class="calculator__tip-input"
+                type="number"
+                id="tip-custom"
+                min="0"
+                step="1"
+                inputmode="numeric"
+                placeholder="Custom"
+                aria-label="Custom tip percentage"
+              />
+            </div>
+          </fieldset>
+
+          <div class="calculator__field">
+            <div class="calculator__field-header">
+              
+              <label class="calculator__label" for="people">Number of People</label>
+              <span class="calculator__error" id="people-error" aria-live="polite" hidden>Can't be zero</span>
+            </div>
+            
+            <div class="calculator__input-wrapper">
+              <img
+                class="calculator__input-icon"
+                src="/icon-person.svg"
+                alt=""
+                aria-hidden="true"
+                width="13"
+                height="16"
+              />
+              
+              <input
+                class="calculator__input"
+                type="number"
+                id="people"
+                min="1"
+                step="1"
+                inputmode="numeric"
+                placeholder="0"
+                aria-describedby="people-error"
+                aria-invalid="false"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="calculator__results" aria-label="Calculated results">
+          <dl class="calculator__summary">
+            
+            <div class="calculator__result">
+              <dt class="calculator__result-heading">
+                <span class="calculator__result-label">Tip Amount</span>
+                <span class="calculator__result-unit">/ person</span>
+              </dt>
+              <dd class="calculator__result-value">
+                <output class="calculator__output" id="tip-amount" aria-live="polite">$0.00</output>
+              </dd>
+            </div>
+
+            <div class="calculator__result">
+              <dt class="calculator__result-heading">
+                <span class="calculator__result-label">Total</span>
+                <span class="calculator__result-unit">/ person</span>
+              </dt>
+              <dd class="calculator__result-value">
+                <output class="calculator__output" id="total-per-person" aria-live="polite">$0.00</output>
+              </dd>
+            </div>
+          </dl>
+          <button class="calculator__reset" type="reset">Reset</button>
+        </section>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
